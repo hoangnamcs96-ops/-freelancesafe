@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #0b1f44;
+  background: #f4f7fc;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl border border-line bg-white shadow-card;
+  }
+  .field {
+    @apply w-full rounded-xl border border-line bg-white px-3.5 py-3 text-[15px] text-ink outline-none transition placeholder:text-subtle focus:border-brand focus:ring-4 focus:ring-brand/15;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.08em] text-muted;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/30 disabled:cursor-not-allowed disabled:opacity-45;
+  }
+  .btn-primary {
+    @apply btn bg-navy text-white hover:bg-navy-deep active:scale-[0.99];
+  }
+  .btn-accent {
+    @apply btn bg-brand text-white hover:bg-brand-dark active:scale-[0.99];
+  }
+  .btn-ghost {
+    @apply btn border border-line bg-white text-ink hover:bg-canvas;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
