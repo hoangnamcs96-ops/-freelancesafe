@@ -41,3 +41,7 @@ USDC escrow for freelancers on Arc Testnet. Client creates a job, funds it with 
 ## Hosting
 
 - Netlify: https://shiny-strudel-115986.netlify.app (built with `bunx vite build`, deployed from `dist`; `public/_redirects` provides the SPA fallback). Redeploy after any change to `.env` VITE_ values, since they are baked in at build time.
+
+## Source control
+
+- GitHub: https://github.com/hoangnamcs96-ops/-freelancesafe (private, branch `main`). Note the leading hyphen in the repo name.
